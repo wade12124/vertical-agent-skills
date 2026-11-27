@@ -1,0 +1,14 @@
+{
+  "skill": "recurring-data-tracking-report",
+  "activation": [
+    {"prompt": "帮我建一个每周五自动跟踪氧化铝价格和库存并输出周报的任务，要落到本地文件夹", "expect": "activate"},
+    {"prompt": "这个定时任务生成的报告越来越不对，上期数字被原样复制到本期了，帮我看看题面怎么写才能防住", "expect": "activate"},
+    {"prompt": "帮我写一个每天早上8点提醒我喝水的提醒", "expect": "no-activate (simple reminder, no report contract)"}
+  ],
+  "effectiveness": [
+    {"task": "给定：跟踪某商品价格/库存/政策三类变量，阈值两条，目录 ./reports。要求产出定时任务题面。",
+     "rubric": ["题面含全部10条契约（自包含/命名/降级路径/截止日期/红线/休市基准/阈值表四列/末尾两段/环比/建后校验）",
+                 "零对话上下文引用（把题面单独发给全新会话可直接执行）",
+                 "文件名模式含 YYYYMMDD"]}
+  ]
+}

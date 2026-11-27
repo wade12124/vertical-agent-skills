@@ -1,0 +1,15 @@
+{
+  "skill": "chinese-longform-drift-gate",
+  "activation": [
+    {"prompt": "这本长篇续写了四十多轮，最近越读越像电报体，句子碎、开头全是议论，帮我建立纠偏机制", "expect": "activate"},
+    {"prompt": "每次让AI改衔接，它就把原来的详细场景当啯嗦删了，怎么防", "expect": "activate"},
+    {"prompt": "帮我检查这篇短文的错别字", "expect": "no-activate (one-off proofreading, not longform drift)"}
+  ],
+  "effectiveness": [
+    {"task": "给定：一个含碎片化短句与拉丁字母混入的续写稿。要求审计并给出修复流程。",
+     "rubric": ["先跑机械闸门并报告退出码",
+                 "人工清单逐项对照而非只报脚本结果",
+                 "修稿前先备份；就地改写先构造完整新字符串再开写柄",
+                 "字数口径=CJK实测、不含标点"]}
+  ]
+}

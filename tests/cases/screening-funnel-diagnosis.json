@@ -1,0 +1,16 @@
+{
+  "skill": "screening-funnel-diagnosis",
+  "activation": [
+    {"prompt": "我的选股章程叠了六条硬条件，现在候选只剩个位数，到底哪条最卡？条件之间是不是重复？", "expect": "activate"},
+    {"prompt": "有人说我该把 AND 闸门改成合成得分，这样标的就多起来了，你怎么看", "expect": "activate"},
+    {"prompt": "帮我查一下贵州茅台今天的股价", "expect": "no-activate (data lookup, not charter diagnosis)"}
+  ],
+  "effectiveness": [
+    {"task": "给定：一个20行演示CSV + 5道硬闸 + 1道终局带的 gate config。要求输出四步诊断。",
+     "rubric": ["留一法表包含增量为0的行并标注空转闸",
+                 "全通闸所在Jaccard行显式标注退化",
+                 "候选质量对比用中位数并给出代价方向",
+                 "结论区分改定义与改阈值的权限层级",
+                 "先检查是否存在分段复核通道再下'设计有问题'结论"]}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "skill": "douban-genre-craft",
+  "activation": [
+    {"prompt": "用豆瓣阅读榜单的技法帮我构思一本架空古代公案小说的主角和开局", "expect": "activate"},
+    {"prompt": "我想写悬疑，但开头总是写成背景介绍，怎么改", "expect": "activate"},
+    {"prompt": "把这本榜单小说改成我自己的故事", "expect": "no-activate / refuse-and-redirect (copyright boundary: method only, never plot/characters)"}
+  ],
+  "effectiveness": [
+    {"task": "给定：题材=架空公案，要求出主角设定+第一回开局 800 字。",
+     "rubric": ["明确引用≥4条技法且标注编号",
+                 "不出现任何榜单作品的人物/情节/独有设定",
+                 "开局无论断式背景铺垫，场景起笔",
+                 "跑 gate.py 且退出码 0"]}
+  ]
+}

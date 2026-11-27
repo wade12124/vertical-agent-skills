@@ -4,6 +4,10 @@ A set of **vertical-scenario** Agent Skills following the [Agent Skills open spe
 
 Every skill is a folder of `SKILL.md` (frontmatter + instructions) plus optional `scripts/` and `references/`, loadable by any compliant client (Claude Code, Codex, Gemini CLI, Cursor, Qoder, etc.). Drop the folder into your client's skills directory — many clients scan `~/.agents/skills/<skill-name>/`, or use `npx skills add wade12124/vertical-agent-skills`.
 
+## Verification status
+
+See [EVALUATION.md](../EVALUATION.md). What is verified and reproducible: spec conformance and credential tripwires (`tools/validate.py`), test-case suite integrity (activation positives + decoy negatives + effectiveness rubrics for all seven skills, `tools/run_eval.py --check`), and end-to-end script runs on a Windows GBK console (the e2e suite caught and fixed a real crash, commit `5bd74e8`). What is deliberately **not claimed**: cross-host activation rates, task success rates, user counts, time-savings numbers, enterprise deployments — `tools/run_eval.py --skeleton` ships the protocol and empty templates for evidence-driven contributions.
+
 ## 1. recurring-data-tracking-report
 
 **Problem it solves:** scheduled "track X and write a report" agents silently degrade when the task prompt depends on conversation context — the artifact becomes unreproducible, numbers get recycled from previous periods, and gaps are never declared.
@@ -56,7 +60,7 @@ Every skill is a folder of `SKILL.md` (frontmatter + instructions) plus optional
 
 ## Boundaries
 
-- No personal paths, credentials, machine-specific configuration, or unpublished creative content anywhere in this repo; example data in scripts is illustrative only.
+- No personal paths, credentials, machine-specific configuration, or unpublished creative content anywhere in this repo; example data in scripts is illustrative only. Checked by `tools/validate.py` tripwires.
 - `funnel_diagnose.py` outputs screening-mechanism diagnostics, not investment advice; threshold changes must go through the charter's own revision process.
 - `douban-genre-craft` redistributes only public ranking metadata analysis; no paywalled text was collected, and the full snapshot is referenced by source URL rather than redistributed.
 - `qoder-scheduled-automation-setup` is Qoder-specific; the other six skills are host-agnostic.

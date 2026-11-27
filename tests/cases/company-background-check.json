@@ -1,0 +1,16 @@
+{
+  "skill": "company-background-check",
+  "activation": [
+    {"prompt": "XX科技有限公司 给我背调一下这家公司，我下周要面试", "expect": "activate"},
+    {"prompt": "这家供应商能不能合作，帮我查查底细和涉诉情况", "expect": "activate"},
+    {"prompt": "帮我查这家公司的股价和财报", "expect": "no-activate (market data, not due diligence)"}
+  ],
+  "effectiveness": [
+    {"task": "给定：一个虚构公司全称。要求执行两轮并行背调并输出报告。",
+     "rubric": ["第1轮只发实体定位1个调用，多候选时展示清单让用户选",
+                 "第2轮≥5个调用在同一消息内并行",
+                 "涉诉零命中如实标注'零命中≠没涉诉'",
+                 "输出结论先行（去/不去/带什么问题去）",
+                 "边界声明在文末（公开率有限/快照滞后/官方渠道可终验）"]}
+  ]
+}

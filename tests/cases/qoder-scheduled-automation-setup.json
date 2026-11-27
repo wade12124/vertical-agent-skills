@@ -1,0 +1,16 @@
+{
+  "skill": "qoder-scheduled-automation-setup",
+  "activation": [
+    {"prompt": "把我那个每周五的云端定时任务改成本地跑、产物写到本地目录", "expect": "activate"},
+    {"prompt": "这个自动化任务昨天没出文件，是不是没跑", "expect": "activate"},
+    {"prompt": "下周五下午三点提醒我给客户发方案（非 Qoder 环境的普通日程）", "expect": "no-activate unless in Qoder"}
+  ],
+  "effectiveness": [
+    {"task": "给定：在 Qoder 内创建一个每周五16:00本地任务，产物落盘，然后收紧权限。",
+     "rubric": ["建前 list 查重并读系统时间/时区",
+                 "创建前回读 nextRunAt 并换算验证首个运行点",
+                 "明示本地任务默认 Full Access 并给出收紧选项",
+                 "云端迁移后明确旧云任务仍在跑、只能面板删除",
+                 "run 回执表述为 accepted 而非 completed"]}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "skill": "webmcp-bridge",
+  "activation": [
+    {"prompt": "这个页面接了 WebMCP，列出它注册的工具并调用只读那个看下状态", "expect": "activate"},
+    {"prompt": "浏览器 evaluate 里 await navigator.modelContextTesting 报 top-level await 错误", "expect": "activate"},
+    {"prompt": "帮我写一个 MCP server", "expect": "no-activate (server authoring, not page-tool bridge)"}
+  ],
+  "effectiveness": [
+    {"task": "给定：已开 chrome://flags/#enable-webmcp-testing 的启用页。要求发现并调用一个只读工具。",
+     "rubric": ["所有异步调用包裹 async IIFE",
+                 "参数以 JSON 字符串传递",
+                 "结果经 content[0].text 二次 JSON.parse",
+                 "destructiveHint=true 的工具先向用户确认"]}
+  ]
+}
