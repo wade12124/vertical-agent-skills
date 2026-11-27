@@ -1,11 +1,12 @@
 ---
 name: company-background-check
 description: 投递前企业背调快筛。当用户给一个公司名要求背调/查底细/查涉诉/判断"去不去"时使用。串联工商登记与司法文书两类数据连接器，加 WebSearch 交叉验证，一轮并行跑完，输出"结论先行"的背调报告。
+description_en: Pre-offer company due-diligence quick screen. Use when the user gives a company name and asks to check its background, litigation exposure, or whether to accept the job. Runs business-registry and court-document connectors plus cross-checking web search in one parallel burst, then outputs a conclusion-first due-diligence report with honest coverage caveats.
 ---
 
 # 投递前企业背调（工商 + 司法连接器 + WebSearch）
 
-> 依赖：需要「企查查（qcc）」类工商/司法数据 MCP 连接器；若无，可将第 2 轮全部替换为 WebSearch 聚合快照，输出模板不变，但须在报告中显式降级标注。
+> 依赖：需要「企查查（qcc）」类工商/司法数据连接器；若无，可将第 2 轮全部替换为 WebSearch 聚合快照，输出模板不变，但须在报告中显式降级标注。
 
 ## 效率铁律
 

@@ -7,7 +7,7 @@ description: Write original Chinese genre fiction (悬疑/公案/政治/言情/�
 
 ## Overview
 
-把豆瓣阅读畅销榜单成功作品的**可迁移写作技法**（思想/方法层）用于**原创**类型小说。技法来自真实榜单采集与三本代表作公开简介的三角验证，证据见 `references/techniques.md`。
+把豆瓣阅读畅销榜单成功作品的**可迁移写作技法**（思想/方法层）用于**原创**类型小说。技法来自真实榜单采集与三本代表作公开简介的三角验证，证据见 `references/techniques.md`。12 transferable craft techniques for original Chinese genre fiction, triangulated from real Douban Read bestseller rankings; see `docs/README_EN.md` at repo root for the English guide.
 
 ## 版权边界（先于一切）
 

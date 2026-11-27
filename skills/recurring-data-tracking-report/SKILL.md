@@ -1,6 +1,7 @@
 ---
 name: recurring-data-tracking-report
 description: 编写与校验周期性数据跟踪研报（周报、价格台账、无人值守定时任务）的输出契约与题面模板。当用户要求按固定周期自动跟踪某标的/指标并产出 Markdown 研报、把云端自动化改为本地文件产物、要求环比连续或要求报告带阈值检查表与数据缺口清单时使用。核心是题面自包含：另一 agent 无需创建会话上下文即可原样重跑。
+description_en: Author and validate output contracts for recurring data-tracking reports (weekly digests, price ledgers, unattended scheduled tasks). Use when the user wants an agent to track a subject or metric on a fixed cycle and emit Markdown reports, convert cloud automation into local file artifacts, keep period-over-period comparisons continuous, or require threshold check tables and data-gap lists. Core idea: the task prompt must be self-contained so any fresh agent session can re-run it without inheriting conversation context.
 ---
 
 # 周期性数据跟踪研报

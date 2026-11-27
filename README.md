@@ -4,7 +4,7 @@
 
 与通用 coding skill 合集不同，本仓库聚焦**行业工作流**：周期性数据跟踪、筛选章程诊断、投递前企业背调、中文类型小说创作、WebMCP 页面工具桥。
 
-A collection of vertical-scenario Agent Skills following the Agent Skills open standard. Focus: industry workflows rather than generic coding.
+A collection of vertical-scenario Agent Skills following the Agent Skills open standard. Focus: industry workflows rather than generic coding. → [English guide](docs/README_EN.md)
 
 ## Skills
 

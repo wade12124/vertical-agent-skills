@@ -1,6 +1,7 @@
 ---
 name: screening-funnel-diagnosis
 description: 诊断一套多闸门选股/选基章程的"闸门效率"——量化每道闸的边际约束力、闸与闸之间的冗余度、以及"既要又要"造成的样本损失。适用于用户问"我的筛选方法是不是太多条件导致标的稀少""哪个条件最卡""这些条件是不是重复""能改什么"。典型触发词：标的稀少、候选太少、既要又要、条件冗余、漏斗、哪道闸最卡、筛选效率、过度筛选、AND 硬闸。
+description_en: Diagnose the gate efficiency of a multi-gate screening charter (stock/fund selection rules or index-methodology replicas) — quantify each gate's marginal constraint via leave-one-out, redundancy between gates via a Jaccard matrix, and the sample loss caused by "want-it-all" AND conditions. Use when the user asks which condition binds most, whether conditions overlap, or what can be changed. Ships scripts/funnel_diagnose.py; output is mechanism diagnosis, not investment advice.
 ---
 
 # 筛选章程 · 闸门效率诊断
